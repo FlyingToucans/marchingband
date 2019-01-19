@@ -17,6 +17,22 @@ span.marked, span.Header2 {
  color:#e80000;
  background-color:transparent;
 }
+
+.model-box {
+  position:   relative;
+  width:      80%;
+  height: 0;
+  padding-top:   56.25%; /* This is your aspect ratio of 16:9 */ }
+
+.model {
+  position: absolute;
+  top:      0;
+  left:     0;
+  bottom:   0;
+  right:    0;
+  width:    100%;
+  height:   100%
+}
 /* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
 .header {
    font: 100 12px 'Merienda One', Helvetica, sans-serif;
@@ -80,18 +96,16 @@ h2 {
 </div>
 
 <h2>Sample Videos</h2>
-</center>
-	<iframe width="80%" height="80%"
-	src="https://www.youtube.com/embed/YiWT4oiyiJQ">
-	</iframe>
-	<br>
-	<iframe width="80%" height="80%"
-	src="https://www.youtube.com/embed/vbWywm4u92s">
-	</iframe>
-	<br>
-	<iframe width="80%" height="80%"
-	src="https://www.youtube.com/embed/25ENWW2hZu8">
-	</iframe>
+<center>
+<div class="model-box">
+	<iframe class="model" src="https://www.youtube.com/embed/YiWT4oiyiJQ" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<div class="model-box">
+	<iframe class="model" src="https://www.youtube.com/embed/vbWywm4u92s" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<div class="model-box">
+	<iframe class="model" src="https://www.youtube.com/embed/25ENWW2hZu8" frameborder="0" allowfullscreen=""></iframe>
+</div>
 </center>
 
  <div class="copyright">
