@@ -8,15 +8,22 @@
 
 <style>
 body {background-color: skyblue;}
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+* {
+  box-sizing: border-box;
 }
-span.marked, span.Header2 {
- color:#e80000;
- background-color:transparent;
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
 }
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+	
 /* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
 .header {
    font: 100 12px 'Merienda One', Helvetica, sans-serif;
@@ -82,16 +89,22 @@ h2 {
   <a href="contacts.html">CONTACTS</a>
 </div>
 
-<img style="height: 30%; width: 30%;";
-	 src="images/DEHS-Color-Guard-2016-2017-300x199.jpeg">
-<img style="height: 30%; width: 30%;";
-	 src="images/DEHS-Baritone-Section-2016-2017-300x199.jpeg">
-<img style="height: 30%; width: 30%;";
-	 src="images/DEHS-Flute-Section-2016-2017-300x199.jpeg">
-<img style="height: 30%; width: 30%;";
-	 src="images/DEHS-Pit-Section-2016-2017-300x199.jpeg">
+<div class="row">
+  <div class="column">
+    <img src="images/DEHS-Color-Guard-2016-2017-300x199.jpeg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/DEHS-Baritone-Section-2016-2017-300x199.jpeg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/DEHS-Flute-Section-2016-2017-300x199.jpeg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="images/DEHS-Pit-Section-2016-2017-300x199.jpeg" style="width:100%">
+  </div>
+</div>
 
- <div class="copyright">
+<div class="copyright">
    <center>
 	  Copyright © 2019 flyingtoucans.github.io
    </center>
