@@ -12,6 +12,9 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+media_element {
+    margin-left: 50px;
+}
 /* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
 .header {
    font: 100 20px 'Merienda One', Helvetica, sans-serif;
@@ -82,25 +85,38 @@ h2 {
 
 <h2>Sample Videos</h2>
 <center>
-<iframe class="model" src="https://www.youtube.com/embed/YiWT4oiyiJQ" frameborder="0" allowfullscreen=""></iframe>
-<iframe class="model" src="https://www.youtube.com/embed/vbWywm4u92s" frameborder="0" allowfullscreen=""></iframe>
-<iframe class="model" src="https://www.youtube.com/embed/VgFmlcavoJc" frameborder="0" allowfullscreen=""></iframe>
+<media_element>
+    <iframe src="https://www.youtube.com/embed/YiWT4oiyiJQ" frameborder="0" allowfullscreen=""></iframe>
+</media_element>
+<media_element>
+    <iframe src="https://www.youtube.com/embed/vbWywm4u92s" frameborder="0" allowfullscreen=""></iframe>
+</media_element>
+<media_element>
+    <iframe src="https://www.youtube.com/embed/VgFmlcavoJc" frameborder="0" allowfullscreen=""></iframe>
+</media_element>
+	
 </center>
 
 <h2>Sample Audio Tracks</h2>
 <center>
+<media_element>
 <audio controls>
   <source src="audio/FireFliesCloser.mp3" type="audio/mp3">
 Your browser does not support the audio element.
 </audio>
+</media_element>
+<media_element>
 <audio controls>
   <source src="audio/HideAndSeekBallad.mp3" type="audio/mp3">
 Your browser does not support the audio element.
 </audio>
+</media_element>
+<media_element>
 <audio controls>
   <source src="audio/FireFliesOpener.mp3" type="audio/mp3">
 Your browser does not support the audio element.
 </audio>
+</media_element>
 
  </center>
 
