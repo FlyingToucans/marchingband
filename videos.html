@@ -21,7 +21,7 @@
   width:    100%;
   height:   100%
 }
-/* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/  */
+/* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
 .header {
    font: 100 20px 'Merienda One', Helvetica, sans-serif;
    color: #ff3300;
@@ -29,7 +29,7 @@
    padding-top: 10px;
    padding-bottom: 10px;
    margin-top: 10px;
-   margin-bottom: 10px;
+   margin-bottom: 5px;
    height: 100px;
    width: 100%;
 }
@@ -38,9 +38,9 @@
   height: 60px;
   width: 100%;
   text-align: center;
-  margin-left: 150px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-left: 100px;
+  margin-top: 5px;
+  margin-bottom: 60px;
   padding-top: 10px;
   font-size: 24px;
   font-weight: bold;
@@ -51,7 +51,7 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 8px 20px;
+  padding: 8px 10px;
   text-decoration: none;
 }
 /* Links - change color on hover */
@@ -59,40 +59,78 @@
   background-color: GoldenRod ;
   color: Maroon;
 }
-	
+@media only screen and (max-width: 720px) {
 h2 {
-  font: 100 30px 'Berkshire Swash', Helvetica, sans-serif;
-  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
-  color: Maroon;
-  font: bold;
+  font: 100 16px 'Berkshire Swash', Helvetica, sans-serif;
+  color: #f2f2f2;
+  font-weight: bold;
   margin-left: 50px;
   margin-bottom: 20px;
   padding-top: 10px;
-  padding-bottom: 10px;	
+  padding-bottom: 5px;	
+ }
+h4 {
+  text-align: justify;
+  font-size: 12px; 
+  color: #ffff00; 
+  margin-left: 50px; margin-bottom: 10px;
+ }
+h6 {
+  text-align: center;
+  font-size: 12px;
+  color: #ffcc00;
+  margin-top:50px; margin-bottom:20px; 
+ }
+}
+@media only screen and (min-width: 720px) {
+h2 {
+  font: 100 20px 'Berkshire Swash', Helvetica, sans-serif;
+  color: #f2f2f2;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;	
+ }
+h4 {
+  text-align: justify;
+  font-size: 20px;
+  color: #ffff00;
+  margin-left: 50px;
+  margin-bottom: 10px;
+ }
+h6 {
+  text-align: center;
+  font-size: 12px;
+  color: #ffcc00;
+  margin-top:50px;
+  margin-bottom:20px; 
+ }
 }
 </style>
-
 </head>
-<body style="background-image:url('images/BackGround_ShinyBlue.jpg')">
+
+<body style="background-image:url('images/BackGround_ShinyBlue.jpg');  background-repeat: no-repeat; background-size: cover;
+	     background-position: 0% 0%; background-color: ##0000cc;">
 
 <div class="header">
 <img src="images/dasd_logo.jpg" 
 	 alt="https://s3.amazonaws.com/bandlogos.ussba.trigonroad.com/E85A6363-EEBF-0C55-B9917F951370BE04.jpg" 
 	 style="float:left; margin-bottom:20px; height: 160px; width: 120px; object-fit: contain;"
 >
-  <h1> Flying Toucans Marching Band Videos</h1>
+<h1> Flying Toucans Marching Band</h1>
 </div>
 
 <div class="topnav">
   <a href="index.html">HOME</a>
-  <a href="gallery.html">IMAGES</a>
-  <a href="videos.html">VIDEOS</a>
+  <a href="gallery.html">IMAGE GALLERY</a>
+  <a href="videos.html">VIDEO GALLERY</a>
   <a href="audios.html">AUDIO TRACKS</a>
   <a href="booking.html">EVENT BOOKING</a>
-  <a href="contacts.html">CONTACT US</a>
+  <a href="contacts.html">CONTACTS</a>
 </div>
 
-<h2>Videos Performed By Downingtown Area School District</h2>
+<h2>Videos Performed: Courtsey of Downingtown Area School District</h2>
 <center>
 <div class="model-box">
 	<iframe class="model" src="https://www.youtube.com/embed/YiWT4oiyiJQ" frameborder="0" allowfullscreen=""></iframe>
@@ -127,11 +165,9 @@ h2 {
 </center>
 
 <br> <br>
-<div class="copyright">
-   <center>
-	  Copyright © 2019 https://flyingtoucans.github.io
-   </center>
-</div>
+<center>
+    <h6> Copyright © 2019 https://flyingtoucans.github.io </h6>
+</center>
 	
 </body>
 </html>
