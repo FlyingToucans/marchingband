@@ -7,6 +7,35 @@
 <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
 
 <style>
+@media only screen and (max-width: 480px) {
+  description {
+    text-align: justify;
+    font-size: 14px; 
+    color: #ffff00; 
+    margin-left: 50px; margin-bottom: 10px;
+  }
+  copyright {
+    text-align: center;
+    font-size: 10px;
+    color: #ffcc00;
+    margin-top:25px; margin-bottom:25px; 
+   }
+}
+@media only screen and (max-width: 640px) {
+  description {
+    text-align: justify;
+    font-size: 20px; 
+    font-weigt: bold;
+    color: #ffff00; 
+    margin-left: 50px; margin-bottom: 10px;
+  }
+  copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #ffcc00;
+    margin-top:25px; margin-bottom:25px; 
+   }
+}
 /* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
 .header {
    font: 100 20px 'Merienda One', Helvetica, sans-serif;
@@ -82,9 +111,9 @@ h2 {
  <img src="images/TocoToucan.png" style="width: 20%; display: block; margin:auto" >
 </center>
 
-<div style=" text-align: justify; font-size: 14px; color: #ffff00; margin-left: 50px; margin-bottom: 10px;">
+<div class="description">
 <p> Welcome to the home of the Flying Toucons Marching Band, where you can enjoy the samples of previous performance videos, audio tracks and image gallery. Please support us by attending our next performance :) </p>
-</div>
+</div?
 
 <h2>Sample Videos</h2>
 <center>
@@ -112,10 +141,8 @@ h2 {
 	</audio>
  </center>
 
- <div class="copyright" style="font-size: 10px; margin-top:25px; margin-bottom:25px; color: #ffcc00">
-   <center>
-	  Copyright © 2019 https://flyingtoucans.github.io
-   </center>
+ <div class="copyright">
+      Copyright © 2019 https://flyingtoucans.github.io
 </div>
 
 </body>
