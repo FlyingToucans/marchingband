@@ -91,6 +91,22 @@ h6 {
   margin-bottom:20px; 
  }
 }
+/* Audio Player with Background Image */
+ .audioPlayer {
+    width: 400px;
+    height: 250px;
+    margin-left:50px;
+    margin-bottom:50px;
+    background-image: url('images/Parade.jpeg');
+    background-size: cover;
+    position: relative;
+}
+.audioPlayer audio{
+  position: absolute;
+  padding-left: 5%;
+  bottom: 1%;
+  width: 90%
+}
 </style>
 </head>
 
@@ -115,30 +131,32 @@ h6 {
 </div>
 
 <h2>Purchase Our Audio Tracks: Samples from Downingtown Area School District </h2>
-<audio style="margin-left:50px; margin-bottom:50px;" controls="controls">
-  <source src="audio/Firefly_Opener.mp3" type="audio/mp3">
-Your browser does not support the audio element.
-</audio>
-<br>
-<audio style="margin-left:50px; margin-bottom:50px;" controls="controls">
-  <source src="audio/Hide_and_Seek.mp3" type="audio/mp3">
-Your browser does not support the audio element.
-</audio>
-<br>
-<audio style="margin-left:50px; margin-bottom:50px;" controls="controls">
-  <source src="audio/Fireflies_Closer.mp3" type="audio/mp3">
-Your browser does not support the audio element.
-</audio>
-<br>
-<audio style="margin-left:50px; margin-bottom:50px;" controls="controls">
-  <source src="audio/West_2018_Full.mp3" type="audio/mp3">
-Your browser does not support the audio element.
-</audio>
-<br>
-<audio style="margin-left:50px; margin-bottom:50px;" controls="controls">
-  <source src="audio/West_Last_Year.mp3" type="audio/mp3">
-Your browser does not support the audio element.
-</audio>
+<div class="audioPlayer">
+  <audio controls = 'controls'>
+    <source src='audio/Firefly_Opener.mp3' type= 'audio/mp3'>
+  </audio>
+</div>
+<div class="audioPlayer">
+  <audio controls = 'controls'>
+    <source src='audio/Hide_and_Seek.mp3' type= 'audio/mp3'>
+  </audio>
+</div>
+<div class="audioPlayer">
+  <audio controls = 'controls'>
+    <source src='audio/Fireflies_Closer.mp3' type= 'audio/mp3'>
+  </audio>
+</div>
+<div class="audioPlayer">
+  <audio controls = 'controls'>
+    <source src='audio/West_2018_Full.mp3' type= 'audio/mp3'>
+  </audio>
+</div>
+<div class="audioPlayer">
+  <audio controls = 'controls'>
+    <source src='audio/West_Last_Year.mp3' type= 'audio/mp3'>
+  </audio>
+</div>
+
 <br><br>
 
  <center>
