@@ -92,22 +92,14 @@ h6 {
  }
 }
 /* Audio Player with Background Image */
- .audioPlayer {
-    display: inline-block;
-    width: 360px;
-    height: 200px;
-    margin-left:50px;
-    margin-bottom:25x;
-    background-image: url('images/Parade.jpeg');
-    background-size: cover;
-    position: relative;
-}
-.audioPlayer audio{
-  position: absolute;
-  left: 10%;
-  bottom:1%; 
-  width: 80%;
-  object-fit: contain;
+audio {
+display: inline-block;
+position: relative;
+width: 360px; height: 200px; 
+background-image: url('images/Parade.jpeg');
+background-size: cover; 
+margin-left:25px; margin-bottom:25px;
+padding-top: 25px; padding-bottom: 5px; 
 }
 </style>
 </head>
@@ -133,37 +125,26 @@ h6 {
 </div>
 
 <h2>Sample Audio Tracks: Courtesy of Downingtown Area School District </h2>
-
-<div class="audioPlayer">
+<center>
   <audio controls = 'controls'>
     <source src='audio/Firefly_Opener.mp3' type= 'audio/mp3'>
   </audio>
-</div>
-<div class="audioPlayer">
   <audio controls = 'controls'>
     <source src='audio/Hide_and_Seek.mp3' type= 'audio/mp3'>
   </audio>
-</div>
-<div class="audioPlayer">
   <audio controls = 'controls'>
     <source src='audio/Fireflies_Closer.mp3' type= 'audio/mp3'>
   </audio>
-</div>
-<div class="audioPlayer">
   <audio controls = 'controls'>
     <source src='audio/West_2018_Full.mp3' type= 'audio/mp3'>
   </audio>
-</div>
-<div class="audioPlayer">
   <audio controls = 'controls'>
     <source src='audio/West_Last_Year.mp3' type= 'audio/mp3'>
   </audio>
-</div>
-<div class="audioPlayer">
   <audio controls = 'controls'>
     <source src='audio/West_2015.mp3' type= 'audio/mp3'>
   </audio>
-</div>
+</center>
 	
 <br><br>
 
