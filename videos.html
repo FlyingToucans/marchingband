@@ -7,20 +7,6 @@
 <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
 
 <style>
-.model-box {
-  position:   relative;
-  width: 75%;
-  height: 0;
-  padding-top:   56.25%; /* This is your aspect ratio of 16:9 for video tiles */ }
-.model {
-  position: absolute;
-  top:      0;
-  left:     0;
-  bottom:   0;
-  right:    0;
-  width:    100%;
-  height:   100%
-}
 /* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
 .header {
    font: 100 20px 'Merienda One', Helvetica, sans-serif;
@@ -63,10 +49,7 @@
 h2 {
   font: 100 16px 'Berkshire Swash', Helvetica, sans-serif;
   color: #f2f2f2;
-  margin-left: 50px;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 5px;	
+  margin-left: 50px;  margin-bottom: 20px;
  }
 h4 {
   text-align: justify;
@@ -78,7 +61,7 @@ h6 {
   text-align: center;
   font-size: 12px;
   color: #ffcc00;
-  margin-top:20px; margin-bottom:20px; 
+  margin-top:50px; margin-bottom:20px; 
  }
 }
 @media only screen and (min-width: 720px) {
@@ -87,29 +70,36 @@ h2 {
   color: #f2f2f2;
   margin-left: 50px;
   margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 5px;	
  }
 h4 {
   text-align: justify;
   font-size: 20px;
   color: #ffff00;
-  margin-left: 50px;
-  margin-bottom: 10px;
+  margin-left: 50px;  margin-bottom: 10px;
  }
 h6 {
   text-align: center;
   font-size: 12px;
   color: #ffcc00;
-  margin-top:20px;
-  margin-bottom:20px; 
+  margin-top:50px;  margin-bottom:20px; 
  }
+}
+/* Audio Player with Background Image */
+audio {
+  display: inline-block;
+  position: relative;
+  width: 360px; height: 200px; 
+  background-image: url('images/Parade.jpeg');
+  background-size: cover; 
+  margin-left:25px; margin-bottom:25px;
+  padding-top: 25px; padding-bottom: 5px; 
 }
 </style>
 </head>
 
 <body style="background-image:url('images/BackGround_ShinyBlue.jpg');  background-repeat: no-repeat; background-size: cover;
 	     background-position: 0% 0%; background-color: ##0000cc;">
+
 <div class="header">
 <img src="images/dasd_logo.jpg" 
 	 alt="https://s3.amazonaws.com/bandlogos.ussba.trigonroad.com/E85A6363-EEBF-0C55-B9917F951370BE04.jpg" 
@@ -127,7 +117,7 @@ h6 {
   <a href="contacts.html">CONTACTS</a>
 </div>
 
-<h2>Videos Performed: Courtsey of Downingtown Area School District</h2>
+<h2>Performance Videos: Courtsey of Downingtown Area School District</h2>
 <center>
 <iframe style="margin-left:25px; margin-bottom:25px;"
     src="https://www.youtube.com/embed/5c-CdBX4bD0" width = "375" height = "200" frameborder="0" allowfullscreen=""></iframe>
