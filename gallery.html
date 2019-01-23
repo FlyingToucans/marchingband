@@ -7,21 +7,6 @@
 <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
 
 <style>
-* {
-  box-sizing: border-box;
-}
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-}
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-	
 /* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
 .header {
    font: 100 20px 'Merienda One', Helvetica, sans-serif;
@@ -30,17 +15,17 @@
    padding-top: 10px;
    padding-bottom: 10px;
    margin-top: 10px;
-   margin-bottom: 5px;
+   margin-bottom: 10px;
    height: 100px;
-   width: 100%;
+   width: 90%;
 }
 /* The navbar container */
 .topnav {
   height: 60px;
-  width: 100%;
+  width: 90%;
   text-align: center;
-  margin-left: 200px;
-  margin-top: 25px;
+  margin-left: 150px;
+  margin-top: 5px;
   margin-bottom: 50px;
   padding-top: 10px;
   font-size: 24px;
@@ -62,7 +47,7 @@
 }
 @media only screen and (max-width: 720px) {
 h2 {
-  font: 100 20px 'Berkshire Swash', Helvetica, sans-serif;
+  font: 100 16px 'Berkshire Swash', Helvetica, sans-serif;
   color: #f2f2f2;
   margin-left: 50px;
   margin-top: 25px;
@@ -74,7 +59,8 @@ h4 {
   text-align: justify;
   font-size: 12px; 
   color: #ffff00; 
-  margin-left: 50px; margin-bottom: 10px;
+  margin-left: 50px; margin-right: 50px; 
+  margin-bottom: 10px; margin-top: 10px;
  }
 h6 {
   text-align: center;
@@ -87,7 +73,7 @@ h6 {
 h2 {
   font: 100 20px 'Berkshire Swash', Helvetica, sans-serif;
   color: #f2f2f2;
-  margin-left: 50px;
+  margin-left: 100px;
   margin-top: 25px;
   margin-bottom: 25px;
   padding-top: 10px;
@@ -95,10 +81,11 @@ h2 {
  }
 h4 {
   text-align: justify;
-  font-size: 20px;
+  font-size: 18px;
   color: #ffff00;
-  margin-left: 50px;
-  margin-bottom: 10px;
+  width: 85%;
+  margin-left: 100px; margin-right: 50px;
+  margin-right: 10px; margin-bottom: 10px;
  }
 h6 {
   text-align: center;
@@ -107,6 +94,17 @@ h6 {
   margin-top:50px;
   margin-bottom:20px; 
  }
+figure {
+text-align: center;
+font-style: italic;
+font-family: Georgia, serif;
+font-size: 20px;
+color:#ffbf00;
+display:inline-block;
+position: relative;
+width: 400px; height: 240px; 
+margin-right:10px; margin-right:10px; margin-bottom:20px;
+}
 }
 </style>
 </head>
@@ -134,35 +132,34 @@ h6 {
 
 <h2>Image Gallery: Courtesy of Downingtown Area School District</h2>
 
-<div class="row">
- <div class="column">
-    <img src="images/cool_image.jpeg" style="width:100%; height:300px;">
-  </div>
- <div class="column">
-    <img src="images/snare_drum.jpeg" style="width:100%; height:300px;">
-  </div>
- <div class="column">
-    <img src="images/maxresdefault.jpeg" style="width:100%; height:300px;">
-  </div>
-  <div class="column">
-    <img src="images/another another maxres.jpg" style="width:100%; height:300px;">
-  </div>
-  <div class="column">
-    <img src="images/Parade.jpeg" style="width:100%; height:300px;">
-  </div>
-  <div class="column">
-    <img src="images/DEHS_RoseBowlParade.jpeg" style="width:100%; height:300px;">
-  </div>
-  <div class="column">
-    <img src="images/ColorGaurds.jpg" style="width:100%; height:300px;">
-  </div>
-  <div class="column">
-    <img src="images/Blue and Gold.jpg" style="width:100%; height:300px;">
-  </div>
-  <div class="column">
-    <img src="images/BandInAction.jpeg" style="width:100%; height:300px;">
-  </div>
-</div>
+<center>
+<figure>
+    <img src="images/cool_image.jpeg" style="background-image: url('images/cool_image.jpeg'); background-size: cover">
+</figure>
+<figure>
+    <img src="images/cool_image.jpeg" style="background-image: url('images/snare_drum.jpeg'); background-size: cover">
+</figure>
+<figure>
+    <img src="images/cool_image.jpeg" style="background-image: url('images/maxresdefault.jpeg'); background-size: cover">
+</figure>
+<figure>
+    <img src="images/cool_image.jpeg" style="background-image: url('images/another another maxres.jpg'); background-size: cover">
+</figure>
+<figure>
+    <img src="images/cool_image.jpeg" style="background-image: url('images/Parade.jpeg'); background-size: cover">
+</figure>
+<figure>
+    <img src="images/cool_image.jpeg" style="background-image: url('images/DEHS_RoseBowlParade.jpeg'); background-size: cover">
+</figure>
+<figure>
+    <img src="images/cool_image.jpeg" style="background-image: url('images/ColorGaurds.jpg'); background-size: cover">
+</figure>
+<figure>
+    <img src="images/cool_image.jpeg" style="background-image: url('images/Blue and Gold.jpg'); background-size: cover">
+</figure>
+<figure>
+    <img src="images/cool_image.jpeg" style="background-image: url('images/BandInAction.jpeg'); background-size: cover">
+</figure>
 
  <center>
     <h6> Copyright © 2019 https://flyingtoucans.github.io </h6>
