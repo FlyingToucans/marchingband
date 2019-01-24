@@ -9,42 +9,41 @@
 
 	
 <script>
+function getCommentsStored()
+{
+	document.getElementById("allComments1").innerHTML = localStorage.getItem("comment1");
+	document.getElementById("allComment2").innerHTML = localStorage.getItem("comment2");
+	document.getElementById("allComment3").innerHTML = localStorage.getItem("comment3");
+} 
+function addComment(commentId, allcommentsId){
 
-	    function getCommentsStored()
-		{
-			document.getElementById("allComments1").innerHTML = localStorage.getItem("comment1");
-			document.getElementById("allComment2").innerHTML = localStorage.getItem("comment2");
-			document.getElementById("allComment3").innerHTML = localStorage.getItem("comment3");
-		} 
-		function addComment(commentId, allcommentsId){
-		
-			var comment1 = localStorage.getItem(commentId);
-			var newcomment1 = document.getElementById(commentId).value;
-			if (comment1 == undefined){
-				//alert("no comments..");
-				localStorage.setItem(commentId, newcomment1);
-			}else{
-				//alert("omments.." + comment1);
-				localStorage.setItem(commentId, comment1 + "<br/>" + newcomment1);
-			}
-			document.getElementById(allcommentsId).innerHTML = localStorage.getItem(commentId);
+	var comment1 = localStorage.getItem(commentId);
+	var newcomment1 = document.getElementById(commentId).value;
+	if (comment1 == undefined){
+		//alert("no comments..");
+		localStorage.setItem(commentId, newcomment1);
+	}else{
+		//alert("omments.." + comment1);
+		localStorage.setItem(commentId, comment1 + "<br/>" + newcomment1);
+	}
+	document.getElementById(allcommentsId).innerHTML = localStorage.getItem(commentId);
 
-		}
-		
-		function changeColor(selectedbutton, color, unselectedbutton){
-			var currentSelection = document.getElementById(selectedbutton);
-			var otherButton = document.getElementById(unselectedbutton);
-			if (color == "red"){
-			  currentSelection.style.backgroundColor = "red";
-			 
-			}else{
-				currentSelection.style.backgroundColor = "green";
-			}
-			 //change the color of the unselected button  to white
-			 otherButton.style.backgroundColor = "white";
-		}
+}
 
-	</script>	
+function changeColor(selectedbutton, color, unselectedbutton){
+	var currentSelection = document.getElementById(selectedbutton);
+	var otherButton = document.getElementById(unselectedbutton);
+	if (color == "red"){
+	  currentSelection.style.backgroundColor = "red";
+
+	}else{
+		currentSelection.style.backgroundColor = "green";
+	}
+	 //change the color of the unselected button  to white
+	 otherButton.style.backgroundColor = "white";
+}
+
+</script>	
 	
 <style>
 /* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
@@ -294,11 +293,12 @@ button:hover {
 
 <h2> Latest Updates: </h2>
 <br>
-<div style="width:80%; contnt-align: left; margin-left:100px;">
+<div style="width:80%; contnt-align: left; margin-left:100px">
 <div class="row" >
-  <div class="column" style="background-color:#ccffff;margin-left: 50px; margin-right: 50px">
-    <div class="sectiondiv">
-		<div class="commentbkgnd"> 2/18/2019: Hi everyone! We are so excited to announce this seasons's opener! A Night in China will be featured on March 2, 2019. Please come out and enjoy the opener!! Snacks and beverages will be served in the stadium with 25% of all gatherings going to charity. Who's coming?:)</div>
+  <div class="column" style="background-color:#ccffff">
+    <div class="sectiondiv"  style="padding-left: 50px; padding-right: 50px">
+	<div class="commentbkgnd"> 
+		2/18/2019: Hi everyone! We are so excited to announce this seasons's opener! A Night in China will be featured on March 2, 2019. Please come out and enjoy the opener!! Snacks and beverages will be served in the stadium with 25% of all gatherings going to charity. Who's coming?:)</div>
 		<br/>
 		<form id = "commentForm" >
 		<textarea rows="4" cols="41" id="comment1" placeholder="Enter comment here..." ></textarea>
@@ -309,21 +309,19 @@ button:hover {
 		<div id="div_comments">
 			<p><strong> Your Comments:</strong></p>
 			<p id="allComments1"></p>
-
 		</div>
 		<div id="div_rating">
 			<p> 3/8/2019: Did you like our performance yesterday?? We always love your feedback! </p>
 			<hr/>
 			<input type = "button" id = "yesbutton1" class= "button button1" value = "Yes, definitely!" onClick="changeColor('yesbutton1', 'green', 'nobutton1')"/>
 			<input type = "button" id = "nobutton1" class= "button button2" value = "Not really..." onClick="changeColor('nobutton1', 'red', 'yesbutton1')"/>
-		</div>
-		
+		</div>	
+  	</div>
+    </div> 
   </div>
-  </div>
-  <div class="column" style="background-color:#ccffff;margin-left: 50px; margin-right: 50px">
-   <div class="sectiondiv">
-		    <div class="sectiondiv">
-		<div class="commentbkgnd1"> 4/9/2019: Hey guys! Please come out and join us for another performance! We have something really excited planned out for the halftime show, so it would be great if you guys could show you support. If you have any questions about schedules, just visit event booking or ask questiosn down below! Thanks:)</div>
+  <div class="column" style="background-color:#ccffff">
+   <div class="sectiondiv" style="padding-left: 50px; padding-right: 50px">
+	<div class="commentbkgnd1"> 4/9/2019: Hey guys! Please come out and join us for another performance! We have something really excited planned out for the halftime show, so it would be great if you guys could show you support. If you have any questions about schedules, just visit event booking or ask questiosn down below! Thanks:)</div>
 		<br/>
 		<form id = "commentForm" >
 		<textarea rows="4" cols="41" id="comment2" placeholder= "Enter comment here..."></textarea>
@@ -341,14 +339,13 @@ button:hover {
 			<hr/>
 			<input type = "button" id = "yesbutton2" class= "button button1" value = "Yes, I can make it!" onClick="changeColor('yesbutton2', 'green', 'nobutton2')"/>
 			<input type = "button" id = "nobutton2" class= "button button2" value = "No, sorry..." onClick="changeColor('nobutton2', 'red', 'yesbutton2')"/>
-		</div>
-		
+		</div>	
+  	</div>
+     </div>
   </div>
-   </div>
-  </div>
-  <div class="column" style="background-color:#ccffff;margin-left: 50px; margin-right: 50px">
-    <div class="sectiondiv">
-		<div class="commentbkgnd2"> 5/15/2019: Hey guys! We cannot believe that our live shows this season are coming to an end! It has been a great season, especially with all of your support. Don't forget our last live show is on May 20. We have A LOT of special features and props, so you definitely don't want to miss out! Book tickets on our official website before they run out!!</div>
+  <div class="column" style="background-color:#ccffff">
+    <div class="sectiondiv" style="padding-left: 50px; padding-right: 50px">
+	<div class="commentbkgnd2"> 5/15/2019: Hey guys! We cannot believe that our live shows this season are coming to an end! It has been a great season, especially with all of your support. Don't forget our last live show is on May 20. We have A LOT of special features and props, so you definitely don't want to miss out! Book tickets on our official website before they run out!!</div>
 		<br/>
 		<form id = "commentForm" >
 		<textarea rows="4" cols="41" id="comment3" placeholder= "Enter comment here..."></textarea>
@@ -368,7 +365,8 @@ button:hover {
 			<input type = "button" id = "nobutton3" class= "button button2" value = "Not yet;)" onClick="changeColor('nobutton3', 'red', 'yesbutton3')"/>
 		</div>
 	</div>
-  </div>
+   </div>
+ </div>
 </div>
 <h4> Subscribe to our Flying Toucans Blog Subscription for constant updates for our show, discounts, and much more. Support our band and become a Flying Toucan by subscribing now. </h4>
 </div>
