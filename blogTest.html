@@ -22,10 +22,11 @@ function addComment(commentId, allcommentsId)
 		//alert("no comments..");
 		localStorage.setItem(commentId, newcomment1);
 	}else{
-		//alert("omments.." + comment1);
+		//alert("comments.." + comment1);
 		localStorage.setItem(commentId, comment1 + "<br/>" + newcomment1);
 	}
 	document.getElementById(allcommentsId).innerHTML = localStorage.getItem(commentId);
+	document.getElementById(allcommentsId).style.color = '#d00';
 }
 
 function changeColor(selectedbutton, color, unselectedbutton)
