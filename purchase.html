@@ -7,8 +7,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
+form { 
 margin: 0 auto; 
-width:900px;
+width:600px;
 }
 body {
   font-family: Arial;
@@ -210,7 +211,7 @@ h6 {
 </div>
 
 <h2> Checkout Form</h2>
-<div class="container"  style="align-content:center">	    
+<div class="container"  style="width:400px; margin-left: 100px; margin-bottom: 100px">	    
 <script>
 function AddAdultTicket() {
   document.getElementById("totalprice").value = "$15";
@@ -222,14 +223,13 @@ function AddChildTicket() {
 
 <p>Click a Button To Select TicketType</p>
 
-<button onclick="AddAdultTicket()">AultTicket</button>
-<button onclick="AddChildTicket()">ChildTicket</button>
+<button style="margin-left: 20px" onclick="AddAdultTicket()">AultTicket</button>
+<button style="margin-left: 20px" onclick="AddChildTicket()">ChildTicket</button>
 <br><br>
 TotalPrice: <input type="text" id="totalprice" value="0">
-
 </div>
-
-    <div class="container" style="align-content:center">
+	
+<div class="container" style="style="width:600px; margin-left: 200px">
       <form action="booking.html">
         <div class="row">
           <div class="col-50">
