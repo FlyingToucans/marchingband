@@ -6,42 +6,42 @@
 <link rel="icon" type="image/ico" href="favicon.ico" />
 <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
-
 	
 <script>
-	    function getCommentsStored()
-		{
-			document.getElementById("allComments1").innerHTML = localStorage.getItem("comment1");
-			document.getElementById("allComment2").innerHTML = localStorage.getItem("comment2");
-			document.getElementById("allComment3").innerHTML = localStorage.getItem("comment3");
-		} 
-		function addComment(commentId, allcommentsId){
-		
-			var comment1 = localStorage.getItem(commentId);
-			var newcomment1 = document.getElementById(commentId).value;
-			if (comment1 == undefined){
-				//alert("no comments..");
-				localStorage.setItem(commentId, newcomment1);
-			}else{
-				//alert("omments.." + comment1);
-				localStorage.setItem(commentId, comment1 + "<br/>" + newcomment1);
-			}
-			document.getElementById(allcommentsId).innerHTML = localStorage.getItem(commentId);
-		}
-		
-		function changeColor(selectedbutton, color, unselectedbutton){
-			var currentSelection = document.getElementById(selectedbutton);
-			var otherButton = document.getElementById(unselectedbutton);
-			if (color == "red"){
-			  currentSelection.style.backgroundColor = "red";
-			 
-			}else{
-				currentSelection.style.backgroundColor = "green";
-			}
-			 //change the color of the unselected button  to white
-			 otherButton.style.backgroundColor = "white";
-		}
-	</script>	
+function getCommentsStored()
+{
+	document.getElementById("allComments1").innerHTML = localStorage.getItem("comment1");
+	document.getElementById("allComment2").innerHTML = localStorage.getItem("comment2");
+	document.getElementById("allComment3").innerHTML = localStorage.getItem("comment3");
+} 
+function addComment(commentId, allcommentsId)
+{
+	var comment1 = localStorage.getItem(commentId);
+	var newcomment1 = document.getElementById(commentId).value;
+	if (comment1 == undefined){
+		//alert("no comments..");
+		localStorage.setItem(commentId, newcomment1);
+	}else{
+		//alert("omments.." + comment1);
+		localStorage.setItem(commentId, comment1 + "<br/>" + newcomment1);
+	}
+	document.getElementById(allcommentsId).innerHTML = localStorage.getItem(commentId);
+}
+
+function changeColor(selectedbutton, color, unselectedbutton)
+{
+	var currentSelection = document.getElementById(selectedbutton);
+	var otherButton = document.getElementById(unselectedbutton);
+	if (color == "red"){
+	  currentSelection.style.backgroundColor = "red";
+
+	}else{
+		currentSelection.style.backgroundColor = "green";
+	}
+	 //change the color of the unselected button  to white
+	 otherButton.style.backgroundColor = "white";
+}
+</script>	
 	
 <style>
 /* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
@@ -287,11 +287,11 @@ button:hover {
 <div style="width:80%; contnt-align: left; margin-left:100px">
 <div class="row" style="padding-top: 10px; padding-bottom: 10px">
     <div class="sectiondiv" style="padding-top: 10px; padding-left: 50px; padding-right: 50px">
-	<div class="commentbkgnd"> 2/18/2019: Hi everyone! We are so excited to announce this seasons's opener! 
+	<h4> 2/18/2019: Hi everyone! We are so excited to announce this seasons's opener! 
 		A Night in China will be featured on March 2, 2019. Please come out and enjoy the opener!! 
 		Snacks and beverages will be served in the stadium with 25% of all gatherings going to charity. 
 		Who's coming?:)
-	</div>
+	</h4>
 	<br/>
 	<form id = "commentForm" >
 	<textarea rows="4" cols="41" id="comment1" placeholder="Enter comment here..." ></textarea>
@@ -301,11 +301,11 @@ button:hover {
 	</form>
 	<br/>
 	<div id="div_comments">
-		<p><strong> Your Comments:</strong></p>
+		<h4><strong> Your Comments:</strong></h4>
 		<p id="allComments1"></p>
 	</div>
 	<div id="div_rating">
-		<p> 3/8/2019: Did you like our performance yesterday?? We always love your feedback! </p>
+		<h4> 3/8/2019: Did you like our performance yesterday?? We always love your feedback! </h4>
 		<hr/>
 		<input type = "button" id = "yesbutton1" class= "button button1" value = "Yes, definitely!" onClick="changeColor('yesbutton1', 'green', 'nobutton1')"/>
 		<input type = "button" id = "nobutton1" class= "button button2" value = "Not really..." onClick="changeColor('nobutton1', 'red', 'yesbutton1')"/>
@@ -315,11 +315,11 @@ button:hover {
 	
 <div class="row" style="padding-top: 10px; padding-bottom: 10px">
    <div class="sectiondiv" style="padding-left: 50px; padding-right: 50px">
-	<div class="commentbkgnd1"> 4/9/2019: Hey guys! Please come out and join us for another performance! 
+	<h4> 4/9/2019: Hey guys! Please come out and join us for another performance! 
 		We have something really excited planned out for the halftime show, so it would be great if you guys could show 
 		your support. If you have any questions about schedules, just visit event booking or ask questiosn down below! 
 		Thanks:)
-	</div>
+	</h4>
 	<br/>
 	<form id = "commentForm" >
 	<textarea rows="4" cols="41" id="comment2" placeholder= "Enter comment here..."></textarea>
@@ -328,11 +328,14 @@ button:hover {
 	</form>
 	<br/>
 	<div id="div_comments2">
-		<p><strong> Your Comments:</strong></p>
+		<h4><strong> Your Comments:</strong></h4>
 		<p id="allComment2"></p>
 	</div>
 	<div id="div_fundraiser">
-		<p> 4/22/2019: Good morning everyone! We are hosting a fundraiser at the stadium to sell concessions and start lessons for younger children at a low cost. Bring you family out tomorrow to have some fun! All proceedings will be going to buying instruments for disadvantaged schools! Can you make it??</p>
+		<h4> 4/22/2019: Good morning everyone! We are hosting a fundraiser at the stadium to sell concessions and 
+			start lessons for younger children at a low cost. Bring you family out tomorrow to have some fun! 
+			All proceedings will be going to buying instruments for disadvantaged schools! Can you make it??
+		</h4>
 		<hr/>
 		<input type = "button" id = "yesbutton2" class= "button button1" value = "Yes, I can make it!" onClick="changeColor('yesbutton2', 'green', 'nobutton2')"/>
 		<input type = "button" id = "nobutton2" class= "button button2" value = "No, sorry..." onClick="changeColor('nobutton2', 'red', 'yesbutton2')"/>
@@ -342,23 +345,26 @@ button:hover {
 
 <div class="row" style="padding-top: 10px; padding-bottom: 10px">
     <div class="sectiondiv" style="padding-left: 50px; padding-right: 50px">
-	<div class="commentbkgnd2"> 5/15/2019: Hey guys! We cannot believe that our live shows this season are coming to an end! 
+	<h4> 5/15/2019: Hey guys! We cannot believe that our live shows this season are coming to an end! 
 		It has been a great season, especially with all of your support. Don't forget our last live show is on May 20. 
 		We have A LOT of special features and props, so you definitely don't want to miss out! 
 		Book tickets on our official website before they run out!!
-	</div>
+	</h4>
 	<br/>
 	<form id = "commentForm" >
 	<textarea rows="4" cols="41" id="comment3" placeholder= "Enter comment here..."></textarea>
-	<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment3', 'allComment3')" style="margin-left: 200px; display: block;"/>
+	<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment3', 'allComment3')" 
+	       style="margin-left: 200px; display: block;"/>
 	</form>
 	<br/>
 	<div id="div_ycomments3">
-		<p><strong> Your Comments:</strong></p>
+		<h4><strong> Your Comments:</strong></h4>
 		<p id="allComment3"></p>
 	</div>
 	<div id="div_subscribe" style="padding-bottom: 10px">
-		<p> 5/20/2018: Our marching band is so excited for tonight! We have a question for all of our Flying Toucan fans. Who has already subscribed to us?:)</p>
+		<h4> 5/20/2018: Our marching band is so excited for tonight! We have a question for all of our Flying Toucan fans. 
+			Who has already subscribed to us?:)
+		</h4>
 		<hr/>
 		<input type = "button" id = "yesbutton3" class= "button button1" value = "ME!!!" onClick="changeColor('yesbutton3', 'green', 'nobutton3')"/>
 		<input type = "button" id = "nobutton3" class= "button button2" value = "Not yet;)" onClick="changeColor('nobutton3', 'red', 'yesbutton3')"/>
