@@ -11,8 +11,11 @@
 function getCommentsStored()
 {
 	document.getElementById("allComments1").innerHTML = localStorage.getItem("comment1");
+	document.getElementById("allComments1").style.color = '#ff33cc';
 	document.getElementById("allComment2").innerHTML = localStorage.getItem("comment2");
+	document.getElementById("allComment2").style.color = '#ff33cc';
 	document.getElementById("allComment3").innerHTML = localStorage.getItem("comment3");
+	document.getElementById("allComment3").style.color = '#ff33cc';
 } 
 function addComment(commentId, allcommentsId)
 {
