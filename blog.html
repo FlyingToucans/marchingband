@@ -6,6 +6,45 @@
 <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
 
+	
+<script>
+
+	    function getCommentsStored()
+		{
+			document.getElementById("allComments1").innerHTML = localStorage.getItem("comment1");
+			document.getElementById("allComment2").innerHTML = localStorage.getItem("comment2");
+			document.getElementById("allComment3").innerHTML = localStorage.getItem("comment3");
+		} 
+		function addComment(commentId, allcommentsId){
+		
+			var comment1 = localStorage.getItem(commentId);
+			var newcomment1 = document.getElementById(commentId).value;
+			if (comment1 == undefined){
+				//alert("no comments..");
+				localStorage.setItem(commentId, newcomment1);
+			}else{
+				//alert("omments.." + comment1);
+				localStorage.setItem(commentId, comment1 + "<br/>" + newcomment1);
+			}
+			document.getElementById(allcommentsId).innerHTML = localStorage.getItem(commentId);
+
+		}
+		
+		function changeColor(selectedbutton, color, unselectedbutton){
+			var currentSelection = document.getElementById(selectedbutton);
+			var otherButton = document.getElementById(unselectedbutton);
+			if (color == "red"){
+			  currentSelection.style.backgroundColor = "red";
+			 
+			}else{
+				currentSelection.style.backgroundColor = "green";
+			}
+			 //change the color of the unselected button  to white
+			 otherButton.style.backgroundColor = "white";
+		}
+
+	</script>	
+	
 <style>
 /* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
 .header {
