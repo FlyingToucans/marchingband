@@ -283,6 +283,23 @@ h6 {
       <p><a href="#">Child Ticket 4</a> <span class="price">$20</span></p>
       <hr>
       <p>Total <span class="price" style="color:black"><b>$90</b></span></p>
+	    
+<script>
+function AddAdultTicket() {
+  document.getElementById("totalprice").value = "$15";
+}
+function AddChildTicket() {
+  document.getElementById("totalprice").value = "$10";
+}
+</script>
+
+<p>Click a Button To Select TicketType</p>
+
+<button onclick="AddAdultTicket()">AultTicket</button>
+<button onclick="AddChildTicket()">ChildTicket</button>
+<br><br>
+TotalPrice: <input type="text" id="totalprice" value="0">
+
     </div>
   </div>
 </div>
