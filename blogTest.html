@@ -26,7 +26,7 @@ function addComment(commentId, allcommentsId)
 		localStorage.setItem(commentId, comment1 + "<br/>" + newcomment1);
 	}
 	document.getElementById(allcommentsId).innerHTML = localStorage.getItem(commentId);
-	document.getElementById(allcommentsId).style.color = '#d00';
+	document.getElementById(allcommentsId).style.color = '#ff33cc';
 }
 
 function changeColor(selectedbutton, color, unselectedbutton)
