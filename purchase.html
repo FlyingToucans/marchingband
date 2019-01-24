@@ -210,11 +210,27 @@ h6 {
 </div>
 
 <h2> Checkout Form</h2>
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <form action="booking.html">
+<div class="container"  style="align-content:center">	    
+<script>
+function AddAdultTicket() {
+  document.getElementById("totalprice").value = "$15";
+}
+function AddChildTicket() {
+  document.getElementById("totalprice").value = "$10";
+}
+</script>
 
+<p>Click a Button To Select TicketType</p>
+
+<button onclick="AddAdultTicket()">AultTicket</button>
+<button onclick="AddChildTicket()">ChildTicket</button>
+<br><br>
+TotalPrice: <input type="text" id="totalprice" value="0">
+
+</div>
+
+    <div class="container" style="align-content:center">
+      <form action="booking.html">
         <div class="row">
           <div class="col-50">
             <h3>Billing Address</h3>
@@ -265,7 +281,6 @@ h6 {
               </div>
             </div>
           </div>
-
         </div>
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
@@ -273,36 +288,7 @@ h6 {
         <input type="submit" value="Continue to checkout" class="btn">
       </form>
     </div>
-  </div>
-  <div class="col-25">
-    <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-      <p><a href="#">Adult Ticket 1</a> <span class="price">$25</span></p>
-      <p><a href="#">Adult Ticket 2</a> <span class="price">$25</span></p>
-      <p><a href="#">Child Ticket 3</a> <span class="price">$20</span></p>
-      <p><a href="#">Child Ticket 4</a> <span class="price">$20</span></p>
-      <hr>
-      <p>Total <span class="price" style="color:black"><b>$90</b></span></p>
-	    
-<script>
-function AddAdultTicket() {
-  document.getElementById("totalprice").value = "$15";
-}
-function AddChildTicket() {
-  document.getElementById("totalprice").value = "$10";
-}
-</script>
 
-<p>Click a Button To Select TicketType</p>
-
-<button onclick="AddAdultTicket()">AultTicket</button>
-<button onclick="AddChildTicket()">ChildTicket</button>
-<br><br>
-TotalPrice: <input type="text" id="totalprice" value="0">
-
-    </div>
-  </div>
-</div>
  <br> <br>
 <center>
     <h6> Copyright © 2019 https://flyingtoucans.github.io </h6>
