@@ -147,7 +147,7 @@ button:hover {
   display: table;
 }
 /* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
+@media only screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
     width: 30%;
   }
@@ -188,8 +188,8 @@ button:hover {
 <h4> Subscribe to our Flying Toucans Blog Subscription for constant updates for our show, discounts, and much more. Support our band and become a Flying Toucan by subscribing now. </h4>
 </div>
 	
-	<form action="action_page.php" style="border:1px solid #ccc">
-  <div class="container">
+<form action="action_page.php" style="border:1px solid #ccc">
+  <div class="container" style="width:50%; content-align:center; margin-left:100px">
     <h4>Sign Up</h4>
     <h4>Please fill in this form to subscribe.</h4>
     <hr>
@@ -207,15 +207,14 @@ button:hover {
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
     </h4>
 
-   
-
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
       <button type="submit" class="signupbtn">Sign Up</button>
     </div>
   </div>
 </form>
-	<br>
+<br>
+
  <center>
     <h6> Copyright © 2019 https://flyingtoucans.github.io </h6>
  </center>
