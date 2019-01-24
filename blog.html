@@ -1,53 +1,215 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-
-	    function getCommentsStored()
-		{
-			document.getElementById("allComments1").innerHTML = localStorage.getItem("comment1");
-			document.getElementById("allComment2").innerHTML = localStorage.getItem("comment2");
-			document.getElementById("allComment3").innerHTML = localStorage.getItem("comment3");
-		} 
-		function addComment(commentId, allcommentsId){
-		
-			var comment1 = localStorage.getItem(commentId);
-			var newcomment1 = document.getElementById(commentId).value;
-			if (comment1 == undefined){
-				//alert("no comments..");
-				localStorage.setItem(commentId, newcomment1);
-			}else{
-				//alert("omments.." + comment1);
-				localStorage.setItem(commentId, comment1 + "<br/>" + newcomment1);
-			}
-			document.getElementById(allcommentsId).innerHTML = localStorage.getItem(commentId);
-
-		}
-		
-		function changeColor(selectedbutton, color, unselectedbutton){
-			var currentSelection = document.getElementById(selectedbutton);
-			var otherButton = document.getElementById(unselectedbutton);
-			if (color == "red"){
-			  currentSelection.style.backgroundColor = "red";
-			 
-			}else{
-				currentSelection.style.backgroundColor = "green";
-			}
-			 //change the color of the unselected button  to white
-			 otherButton.style.backgroundColor = "white";
-		}
-
-	</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flying Toucans Marching Band</title>
+<link rel="icon" type="image/ico" href="favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+	
+<script>
+function getCommentsStored()
+{
+	document.getElementById("allComments1").innerHTML = localStorage.getItem("comment1");
+	document.getElementById("allComments1").style.color = '#e6e600';
+	document.getElementById("allComment2").innerHTML = localStorage.getItem("comment2");
+	document.getElementById("allComment2").style.color = '#e6e600';
+	document.getElementById("allComment3").innerHTML = localStorage.getItem("comment3");
+	document.getElementById("allComment3").style.color = '#e6e600';
+} 
+function addComment(commentId, allcommentsId)
+{
+	var comment1 = localStorage.getItem(commentId);
+	var newcomment1 = document.getElementById(commentId).value;
+	if (comment1 == undefined){
+		//alert("no comments..");
+		localStorage.setItem(commentId, newcomment1);
+	}else{
+		//alert("comments.." + comment1);
+		localStorage.setItem(commentId, comment1 + "<br/>" + newcomment1);
+	}
+	document.getElementById(allcommentsId).innerHTML = localStorage.getItem(commentId);
+	document.getElementById(allcommentsId).style.color = '#e6e600';
+}
+function changeColor(selectedbutton, color, unselectedbutton)
+{
+	var currentSelection = document.getElementById(selectedbutton);
+	var otherButton = document.getElementById(unselectedbutton);
+	if (color == "red"){
+	  currentSelection.style.backgroundColor = "red";
+	}else{
+		currentSelection.style.backgroundColor = "green";
+	}
+	 //change the color of the unselected button  to white
+	 otherButton.style.backgroundColor = "white";
+}
+</script>	
+	
 <style>
+/* Style the header: https://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/   */
+.header {
+   font: 100 20px 'Merienda One', Helvetica, sans-serif;
+   color: #ff3300;
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   height: 100px;
+   width: 90%;
+}
+/* The navbar container */
+.topnav {
+  height: 60px;
+  width: 90%;
+  text-align: center;
+  margin-left: 150px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: GoldenRod ;
+  color: Maroon;
+}
+@media only screen and (max-width: 720px) {
+h2 {
+  font: 100 16px 'Berkshire Swash', Helvetica, sans-serif;
+  color: #f2f2f2;
+  margin-left: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 5px;	 }
+h4 {
+  text-align: justify;
+  font-size: 12px; 
+  color: #ffff00; 
+  margin-left: 100px; margin-bottom: 10px;
+ }
+h6 {
+  text-align: center;
+  font-size: 12px;
+  color: #ffcc00;
+  margin-top:50px; margin-bottom:20px; 
+ }
+}
+@media only screen and (min-width: 720px) {
+h2 {
+  font: 100 20px 'Berkshire Swash', Helvetica, sans-serif;
+  color: #f2f2f2;
+  margin-left: 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;	
+ }
+h4 {
+  text-align: justify;
+  font-size: 20px;
+  color: #ffff00;
+  margin-left: 50px;
+  margin-bottom: 10px;
+ }
+h6 {
+  text-align: center;
+  font-size: 12px;
+  color: #ffcc00;
+  margin-top:50px;
+  margin-bottom:20px; 
+ }
+}
+h3 {
+  display: inline;
+  text-align: left;
+  font-size: 18px;
+  color: #ff00bf;
+  margin-left: 0px;
+  margin-top: 10px; margin-bottom: 10px;
+ }
+h5 {
+  display: inline;
+  text-align: left;
+  font-size: 14px;
+  color: #e6e600;
+  margin-left: 0px;
+  margin-top: 10px; margin-bottom: 10px;
+ }
+* {box-sizing: border-box}
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 50%;
+  padding: 15px;
+  margin: 100px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #C0C0C0;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #C0C0C0;
+  outline: none;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+button:hover {
+  opacity:1;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #FFC0CB;
+}
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 30%;
+}
+/* Add padding to container elements */
+.container {
+  padding: 16px width: 30%;
+}
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Change styles for cancel button and signup button on extra small screens */
+@media only screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 30%;
+  }
 * {
   box-sizing: border-box;
 }
-
 .sectiondiv {
 	padding: 1px;
 }
-
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
@@ -55,14 +217,12 @@
   padding: 1px;
   /*height: 600px;*/
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 .commentbkgnd{
 		background-color: #ffff66;
 		width: 320px;
@@ -87,12 +247,10 @@
 		margin-top: 35px; 
 		margin-left: 35px;
 	}
-
 .button{
 		background-color: #008CBA;
 		font-size: 12px;
 		padding: 10px;
-
 		cursor: pointer;
 		text-align: center;
 		transition-duration: 0.4s;
@@ -102,7 +260,6 @@
 		color: black; 
 		border: 2px solid #4CAF50;
 	}
-
 	.button1:hover{
 		background-color: #4CAF50;
 		color: white;
@@ -117,207 +274,130 @@
 		color: white;
 		
 }
-
-	body{
-		background-color: #3399ff;
-	}
-	.topnav {
-		height: 60px;
-		width: 90%;
-		text-align: center;
-		margin-left: 100px;
-		margin-top: 5px;
-		margin-bottom: 40px;
-		padding-top: 10px;
-		font-size: 24px;
-	font-weight: bold;
 }
-/* Navbar links */
-	.topnav a {
-		float: left;
-		display: block;
-		color: #f2f2f2;
-		text-align: center;
-		padding: 8px 10px;
-		text-decoration: none;
-}
-/* Links - change color on hover */
-.topnav a:hover {
-  background-color: GoldenRod ;
-  color: Maroon;
-}
-	h1{
-		color: red;
-		text-align: center;
-		font-size: 40px;
-		font-family: helvecta;
-	}
-	/*div{
-		background-color: #ffff66;
-		width: 320px;
-		padding: 10px;
-		border: 5px #ffff66;
-		margin-top: 35px; 
-		margin-left: 35px;
-	}
-	*/
-	textarea{
-		margin-left: 35px;
-	}
-	#div_comments{
-		background-color: #ff9966;
-		width: 320px;
-		padding: 2px;
-		border: 2px #ff9966;
-		margin-top: 10px; 
-		margin-left: 35px;
-	}
-	
-	#div_comments2{
-		background-color: #aaff80;
-		width: 320px;
-		padding: 2px;
-		border: 2px #aaff80;
-		margin-top: 10px; 
-		margin-left: 35px;
-	}
-	#div_ycomments3{
-		background-color: #ff3300;
-		width: 320px;
-		padding: 2px;
-		border: 2px #ff3300;
-		margin-top: 10px; 
-		margin-left: 35px;
-	}
-	#div_rating{
-		background-color: #e580ff;
-		width: 320px;
-		padding: 10px;
-		border: 5px #e580ff;
-		margin-top: 35px; 
-		margin-left: 35px;
-	}
-	#div_comment2{
-		background-color: #ffccff;
-		width: 320px;
-		padding: 2px;
-		border: 2px #ffccff;
-		margin-top: 6px; 
-		margin-left: 100px;
-	}
-	#div_fundraiser{
-		background-color: #00e6e6;
-		width: 320px;
-		padding: 10px;
-		border: 5px #00e6e6;
-		margin-top: 35px; 
-		margin-left: 35px;
-	}
-	#div_subscribe{
-		background-color: #f2f2f2;
-		width: 320px;
-		padding: 10px;
-		border: 5px #f2f2f2;
-		margin-top: 35px; 
-		margin-left: 35px;
-	
-	
 </style>
 </head>
-<body style="background-image:url('images/BackGround_ShinyBlue.jpg');  background-repeat: no-repeat; background-size: cover;
-	     background-position: 0% 0%; background-color: ##0000cc;">onload="getCommentsStored()">
 
-<h1>Flying Toucans Marching Band Blog</h1>
+<body style="background-image:url('images/BackGround_ShinyBlue.jpg');  background-repeat: no-repeat; background-size: cover;
+	     background-position: 0% 0%; background-color: ##0000cc;" onload="getCommentsStored()">
+
+<div class="header">
+<img src="images/dasd_logo.jpg" 
+	 alt="https://s3.amazonaws.com/bandlogos.ussba.trigonroad.com/E85A6363-EEBF-0C55-B9917F951370BE04.jpg" 
+	 style="float:left; margin-bottom:20px; height: 160px; width: 120px; object-fit: contain; "
+>
+<h1> Flying Toucans Marching Band</h1>
+</div>
+
 <div class="topnav">
   <a href="index.html">HOME</a>
   <a href="gallery.html">GALLERY</a>
   <a href="videos.html">VIDEOS</a>
   <a href="audios.html">AUDIO TRACKS</a>
   <a href="booking.html">EVENT BOOKING</a>
-  <a href="blogOfficial.html">BLOG</a>
+  <a href="blog.html">BLOG</a>
   <a href="contacts.html">CONTACTS</a>
   <a href="about.html">ABOUT</a>
 </div>
-<div class="row">
-  <div class="column" style="background-color:#3399ff;">
-    <div class="sectiondiv">
-		<div class="commentbkgnd"> 2/18/2019: Hi everyone! We are so excited to announce this seasons's opener! A Night in China will be featured on March 2, 2019. Please come out and enjoy the opener!! Snacks and beverages will be served in the stadium with 25% of all gatherings going to charity. Who's coming?:)</div>
-		<br/>
-		<form id = "commentForm" >
-		<textarea rows="4" cols="41" id="comment1" placeholder="Enter comment here..." ></textarea>
-		
-		<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment1',  'allComments1')" style="margin-left: 200px; display: block;"/>
-		</form>
-		<br/>
-		<div id="div_comments">
-			<p><strong> Your Comments:</strong></p>
-			<p id="allComments1"></p>
 
-		</div>
-		<div id="div_rating">
-			<p> 3/8/2019: Did you like our performance yesterday?? We always love your feedback! </p>
-			<hr/>
-			<input type = "button" id = "yesbutton1" class= "button button1" value = "Yes, definitely!" onClick="changeColor('yesbutton1', 'green', 'nobutton1')"/>
-			<input type = "button" id = "nobutton1" class= "button button2" value = "Not really..." onClick="changeColor('nobutton1', 'red', 'yesbutton1')"/>
-		</div>
-		
-  </div>
-  </div>
-  <div class="column" style="background-color:#3399ff;">
-   <div class="sectiondiv">
-		    <div class="sectiondiv">
-		<div class="commentbkgnd1"> 4/9/2019: Hey guys! Please come out and join us for another performance! We have something really excited planned out for the halftime show, so it would be great if you guys could show you support. If you have any questions about schedules, just visit event booking or ask questiosn down below! Thanks:)</div>
-		<br/>
-		<form id = "commentForm" >
-		<textarea rows="4" cols="41" id="comment2" placeholder= "Enter comment here..."></textarea>
-		
-		<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment2', 'allComment2')" style="margin-left: 200px; display: block;"/>
-		</form>
-		<br/>
-		<div id="div_comments2">
-			<p><strong> Your Comments:</strong></p>
-			<p id="allComment2"></p>
+<h2> Latest Updates: </h2>
+<br>
+<div style="width:80%; contnt-align: left; margin-left:100px">
+<div class="row" style="padding-top: 10px; padding-bottom: 10px">
+    <div class="sectiondiv" style="padding-top: 10px; padding-left: 50px; padding-right: 50px">
+	<h3> 01/14/2019: Hi everyone! We are so excited to announce this seasons's opener! 
+		A Night in China will be featured on March 2, 2019. Please come out and enjoy the opener!! 
+		Snacks and beverages will be served in the stadium with 25% of all gatherings going to charity. 
+		Who's coming?:)
+	</h3>
+	<br/>
+	<form id = "commentForm" >
+	<textarea rows="4" cols="41" id="comment1" placeholder="Enter comment here..." ></textarea>
 
-		</div>
-		<div id="div_fundraiser">
-			<p> 4/22/2019: Good morning everyone! We are hosting a fundraiser at the stadium to sell concessions and start lessons for younger children at a low cost. Bring you family out tomorrow to have some fun! All proceedings will be going to buying instruments for disadvantaged schools! Can you make it??</p>
-			<hr/>
-			<input type = "button" id = "yesbutton2" class= "button button1" value = "Yes, I can make it!" onClick="changeColor('yesbutton2', 'green', 'nobutton2')"/>
-			<input type = "button" id = "nobutton2" class= "button button2" value = "No, sorry..." onClick="changeColor('nobutton2', 'red', 'yesbutton2')"/>
-		</div>
-		
-  </div>
-   </div>
-  </div>
-  <div class="column" style="background-color:#3399ff;">
-    <div class="sectiondiv">
-		<div class="commentbkgnd2"> 5/15/2019: Hey guys! We cannot believe that our live shows this season are coming to an end! It has been a great season, especially with all of your support. Don't forget our last live show is on May 20. We have A LOT of special features and props, so you definitely don't want to miss out! Book tickets on our official website before they run out!!</div>
-		<br/>
-		<form id = "commentForm" >
-		<textarea rows="4" cols="41" id="comment3" placeholder= "Enter comment here..."></textarea>
-		
-		<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment3', 'allComment3')" style="margin-left: 200px; display: block;"/>
-		</form>
-		<br/>
-		<div id="div_ycomments3">
-			<p><strong> Your Comments:</strong></p>
-			<p id="allComment3"></p>
-
-		</div>
-		<div id="div_subscribe">
-			<p> 5/20/2018: Our marching band is so excited for tonight! We have a question for all of our Flying Toucan fans. Who has already subscribed to us?:)</p>
-			<hr/>
-			<input type = "button" id = "yesbutton3" class= "button button1" value = "ME!!!" onClick="changeColor('yesbutton3', 'green', 'nobutton3')"/>
-			<input type = "button" id = "nobutton3" class= "button button2" value = "Not yet;)" onClick="changeColor('nobutton3', 'red', 'yesbutton3')"/>
-		</div>
+	<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment1',  'allComments1')" 
+	       style="margin-left: 200px; display: block;"/>
+	</form>
+	<br/>
+	<div id="div_comments">
+		<h3><strong> Your Comments:</strong></h3>
+		<p id="allComments1"></p>
 	</div>
+	<div id="div_rating">
+		<h5> 01/15/2019: Did you like our special performance during Chrismas?? We always love your feedback! </h5>
+		<hr/>
+		<input type = "button" id = "yesbutton1" class= "button button1" value = "Yes, definitely!" onClick="changeColor('yesbutton1', 'green', 'nobutton1')"/>
+		<input type = "button" id = "nobutton1" class= "button button2" value = "Not really..." onClick="changeColor('nobutton1', 'red', 'yesbutton1')"/>
+	</div>	
+    </div>
   </div>
-</div>
-</br>
- <a href="signup.html">SIGN UP HERE</a>
-  
-  <br> <br>
 	
+<div class="row" style="padding-top: 10px; padding-bottom: 10px">
+   <div class="sectiondiv" style="padding-left: 50px; padding-right: 50px">
+	<h3> 11/20/2018: Hey guys! Please come out and join us for another special performance on Dec 27th! 
+		We have something really excited planned out for the halftime show, so it would be great if you guys could show 
+		your support. If you have any questions about schedules, just visit event booking or ask questiosn down below! 
+		Thanks:)
+	</h3>
+	<br/>
+	<form id = "commentForm" >
+	<textarea rows="4" cols="41" id="comment2" placeholder= "Enter comment here..."></textarea>
+	<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment2', 'allComment2')" 
+	       style="margin-left: 200px; display: block;"/>
+	</form>
+	<br/>
+	<div id="div_comments2">
+		<h3><strong> Your Comments:</strong></h3>
+		<p id="allComment2"></p>
+	</div>
+	<div id="div_fundraiser">
+		<h5> 12/26/2018: Good morning everyone! We are hosting a fundraiser at the stadium to sell concessions and 
+			start lessons for younger children at a low cost. Bring you family out tomorrow to have some fun! 
+			All proceedings will be going to buying instruments for disadvantaged schools! Can you make it??
+		</h5>
+		<hr/>
+		<input type = "button" id = "yesbutton2" class= "button button1" value = "Yes, I can make it!" onClick="changeColor('yesbutton2', 'green', 'nobutton2')"/>
+		<input type = "button" id = "nobutton2" class= "button button2" value = "No, sorry..." onClick="changeColor('nobutton2', 'red', 'yesbutton2')"/>
+	</div>	
+     </div>
+   </div>
+
+<div class="row" style="padding-top: 10px; padding-bottom: 10px">
+    <div class="sectiondiv" style="padding-left: 50px; padding-right: 50px">
+	<h3> 08/15/2018: Hey guys! We cannot believe that our live shows this season are coming to an end! 
+		It has been a great season, especially with all of your support. Don't forget our last live show is on Aug 20th. 
+		We have A LOT of special features and props, so you definitely don't want to miss out! 
+		Book tickets on our official website before they run out!!
+	</h3>
+	<br/>
+	<form id = "commentForm" >
+	<textarea rows="4" cols="41" id="comment3" placeholder= "Enter comment here..."></textarea>
+	<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment3', 'allComment3')" 
+	       style="margin-left: 200px; display: block;"/>
+	</form>
+	<br/>
+	<div id="div_ycomments3">
+		<h3><strong> Your Comments:</strong></h3>
+		<p id="allComment3"></p>
+	</div>
+	<div id="div_subscribe" style="padding-bottom: 10px">
+		<h5> 08/20/2018: Our marching band is so excited for tonight! We have a question for all of our Flying Toucan fans. 
+			Who has already subscribed to us?:)
+		</h5>
+		<hr/>
+		<input type = "button" id = "yesbutton3" class= "button button1" value = "ME!!!" onClick="changeColor('yesbutton3', 'green', 'nobutton3')"/>
+		<input type = "button" id = "nobutton3" class= "button button2" value = "Not yet;)" onClick="changeColor('nobutton3', 'red', 'yesbutton3')"/>
+	</div>
+     </div>
+  </div>
+
+</div>
+<h4> Subscribe to our Flying Toucans Blog Subscription for constant updates for our show, discounts, and much more. 
+	Support our band and become a Flying Toucan by subscribing now. </h4>
+<center>
+<h5> <a href="signup.html" > <font color="#ff00bf"; size="24px">SIGN UP!</font> </a> </h5>
+</center>
+<br>
+
  <center>
     <h6> Copyright © 2019 https://flyingtoucans.github.io </h6>
  </center>
