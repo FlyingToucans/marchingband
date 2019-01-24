@@ -119,8 +119,33 @@
 }
 
 	body{
-		background-color: #ccffff;
+		background-color: #3399ff;
 	}
+	.topnav {
+		height: 60px;
+		width: 90%;
+		text-align: center;
+		margin-left: 150px;
+		margin-top: 5px;
+		margin-bottom: 40px;
+		padding-top: 10px;
+		font-size: 24px;
+	font-weight: bold;
+}
+/* Navbar links */
+	.topnav a {
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 8px 10px;
+		text-decoration: none;
+}
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: GoldenRod ;
+  color: Maroon;
+}
 	h1{
 		color: red;
 		text-align: center;
@@ -189,21 +214,31 @@
 		margin-left: 35px;
 	}
 	#div_subscribe{
-		background-color: #1a8cff;
+		background-color: #f2f2f2;
 		width: 320px;
 		padding: 10px;
-		border: 5px #1a8cff;
+		border: 5px #f2f2f2;
 		margin-top: 35px; 
 		margin-left: 35px;
+	
 	
 </style>
 </head>
 <body onload="getCommentsStored()">
 
 <h1>Flying Toucans Marching Band Blog</h1>
-
+<div class="topnav">
+  <a href="index.html">HOME</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="videos.html">VIDEOS</a>
+  <a href="audios.html">AUDIO TRACKS</a>
+  <a href="booking.html">EVENT BOOKING</a>
+  <a href="blog.html">BLOG</a>
+  <a href="contacts.html">CONTACTS</a>
+  <a href="about.html">ABOUT</a>
+</div>
 <div class="row">
-  <div class="column" style="background-color:#ccffff;">
+  <div class="column" style="background-color:#3399ff;">
     <div class="sectiondiv">
 		<div class="commentbkgnd"> 2/18/2019: Hi everyone! We are so excited to announce this seasons's opener! A Night in China will be featured on March 2, 2019. Please come out and enjoy the opener!! Snacks and beverages will be served in the stadium with 25% of all gatherings going to charity. Who's coming?:)</div>
 		<br/>
@@ -227,7 +262,7 @@
 		
   </div>
   </div>
-  <div class="column" style="background-color:#ccffff;">
+  <div class="column" style="background-color:#3399ff;">
    <div class="sectiondiv">
 		    <div class="sectiondiv">
 		<div class="commentbkgnd1"> 4/9/2019: Hey guys! Please come out and join us for another performance! We have something really excited planned out for the halftime show, so it would be great if you guys could show you support. If you have any questions about schedules, just visit event booking or ask questiosn down below! Thanks:)</div>
@@ -253,7 +288,7 @@
   </div>
    </div>
   </div>
-  <div class="column" style="background-color:#ccffff;">
+  <div class="column" style="background-color:#3399ff;">
     <div class="sectiondiv">
 		<div class="commentbkgnd2"> 5/15/2019: Hey guys! We cannot believe that our live shows this season are coming to an end! It has been a great season, especially with all of your support. Don't forget our last live show is on May 20. We have A LOT of special features and props, so you definitely don't want to miss out! Book tickets on our official website before they run out!!</div>
 		<br/>
@@ -277,6 +312,39 @@
 	</div>
   </div>
 </div>
+</br>
+<form action="blog.html" style="border:2px solid #ccc">
+  <div class="container">
+    <h2>Sign Up</h2>
+    <h4>Please fill in this form to create an account.</h4>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    
+    <p>By creating an account you agree to our <a href="#" style="color: Pink">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+  <br> <br>
+	
+ <center>
+    <h6> Copyright © 2019 https://flyingtoucans.github.io </h6>
+ </center>
 
 </body>
 </html>
