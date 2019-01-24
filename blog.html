@@ -271,12 +271,12 @@ button:hover {
 </head>
 
 <body style="background-image:url('images/BackGround_ShinyBlue.jpg');  background-repeat: no-repeat; background-size: cover;
-	     background-position: 0% 0%; background-color: ##0000cc;">
+	     background-position: 0% 0%; background-color: ##0000cc;" onload="getCommentsStored()">
 
 <div class="header">
 <img src="images/dasd_logo.jpg" 
 	 alt="https://s3.amazonaws.com/bandlogos.ussba.trigonroad.com/E85A6363-EEBF-0C55-B9917F951370BE04.jpg" 
-	 style="float:left; margin-bottom:20px; height: 160px; width: 120px; object-fit: contain;"
+	 style="float:left; margin-bottom:20px; height: 160px; width: 120px; object-fit: contain; "
 >
 <h1> Flying Toucans Marching Band</h1>
 </div>
@@ -295,12 +295,83 @@ button:hover {
 <h2> Latest Updates: </h2>
 <br>
 <div style="width:80%; contnt-align: left; margin-left:100px">
-<h4>Feel free to contact us with any questions you may have to be answered on this blog. Additionally, this blog provides details for the big show coming up. Hope we answer some questions regarding the show :)</h4>
-<h4> Update 1/22/19: Our show will premier soon and it is time you get your tickets. Our band was been practicing for weeks now and you will love the musical performance. Remember, the show will take place at the Giants and Jets Stadium in East Rutherford, NJ so you can visit the amazing stadium while listening and supporting our crew. THANKS!!!</h4>
-<h4> Update 1/3/19: HAPPY NEW YEAR!!! Get right into the new year by purchasing tickets and audio tracks to support the Flying Toucans Marching Band. You will love the performance set up for our show opening. Also, there will be food and drinks to compliment your show visit. Also, the stadium is rented for nights of fun. Our and your service hours have paid off. THANKS!!!</h4>
-<h4> Update 12/18/18: The website is fully functional so PLEASE buy tickets and support our crew as well as other bands. We have just started practicing for the big show so come out and show some support. Additionally, we need money to rent the stadium and we are 3/4 of the way there. We just need community service hours. Our members have been volunteering for almost over 200 hours now. THANKS!!! </h4>	
-<h4> Update 12/7/18: Welcome to the Flying Toucans Marching Band Website. Not everything is up to date so please be patient as we are constantly updating. Remeber, our show opening is in March so please buy tickets. THANKS!!!</h4>
 
+
+<div class="row">
+  <div class="column" style="background-color:#ccffff;">
+    <div class="sectiondiv">
+		<div class="commentbkgnd"> 2/18/2019: Hi everyone! We are so excited to announce this seasons's opener! A Night in China will be featured on March 2, 2019. Please come out and enjoy the opener!! Snacks and beverages will be served in the stadium with 25% of all gatherings going to charity. Who's coming?:)</div>
+		<br/>
+		<form id = "commentForm" >
+		<textarea rows="4" cols="41" id="comment1" placeholder="Enter comment here..." ></textarea>
+		
+		<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment1',  'allComments1')" style="margin-left: 200px; display: block;"/>
+		</form>
+		<br/>
+		<div id="div_comments">
+			<p><strong> Your Comments:</strong></p>
+			<p id="allComments1"></p>
+
+		</div>
+		<div id="div_rating">
+			<p> 3/8/2019: Did you like our performance yesterday?? We always love your feedback! </p>
+			<hr/>
+			<input type = "button" id = "yesbutton1" class= "button button1" value = "Yes, definitely!" onClick="changeColor('yesbutton1', 'green', 'nobutton1')"/>
+			<input type = "button" id = "nobutton1" class= "button button2" value = "Not really..." onClick="changeColor('nobutton1', 'red', 'yesbutton1')"/>
+		</div>
+		
+  </div>
+  </div>
+  <div class="column" style="background-color:#ccffff;">
+   <div class="sectiondiv">
+		    <div class="sectiondiv">
+		<div class="commentbkgnd1"> 4/9/2019: Hey guys! Please come out and join us for another performance! We have something really excited planned out for the halftime show, so it would be great if you guys could show you support. If you have any questions about schedules, just visit event booking or ask questiosn down below! Thanks:)</div>
+		<br/>
+		<form id = "commentForm" >
+		<textarea rows="4" cols="41" id="comment2" placeholder= "Enter comment here..."></textarea>
+		
+		<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment2', 'allComment2')" style="margin-left: 200px; display: block;"/>
+		</form>
+		<br/>
+		<div id="div_comments2">
+			<p><strong> Your Comments:</strong></p>
+			<p id="allComment2"></p>
+
+		</div>
+		<div id="div_fundraiser">
+			<p> 4/22/2019: Good morning everyone! We are hosting a fundraiser at the stadium to sell concessions and start lessons for younger children at a low cost. Bring you family out tomorrow to have some fun! All proceedings will be going to buying instruments for disadvantaged schools! Can you make it??</p>
+			<hr/>
+			<input type = "button" id = "yesbutton2" class= "button button1" value = "Yes, I can make it!" onClick="changeColor('yesbutton2', 'green', 'nobutton2')"/>
+			<input type = "button" id = "nobutton2" class= "button button2" value = "No, sorry..." onClick="changeColor('nobutton2', 'red', 'yesbutton2')"/>
+		</div>
+		
+  </div>
+   </div>
+  </div>
+  <div class="column" style="background-color:#ccffff;">
+    <div class="sectiondiv">
+		<div class="commentbkgnd2"> 5/15/2019: Hey guys! We cannot believe that our live shows this season are coming to an end! It has been a great season, especially with all of your support. Don't forget our last live show is on May 20. We have A LOT of special features and props, so you definitely don't want to miss out! Book tickets on our official website before they run out!!</div>
+		<br/>
+		<form id = "commentForm" >
+		<textarea rows="4" cols="41" id="comment3" placeholder= "Enter comment here..."></textarea>
+		
+		<input type = "button" id = "submit" value = "Submit your Comment" onClick = "addComment('comment3', 'allComment3')" style="margin-left: 200px; display: block;"/>
+		</form>
+		<br/>
+		<div id="div_ycomments3">
+			<p><strong> Your Comments:</strong></p>
+			<p id="allComment3"></p>
+
+		</div>
+		<div id="div_subscribe">
+			<p> 5/20/2018: Our marching band is so excited for tonight! We have a question for all of our Flying Toucan fans. Who has already subscribed to us?:)</p>
+			<hr/>
+			<input type = "button" id = "yesbutton3" class= "button button1" value = "ME!!!" onClick="changeColor('yesbutton3', 'green', 'nobutton3')"/>
+			<input type = "button" id = "nobutton3" class= "button button2" value = "Not yet;)" onClick="changeColor('nobutton3', 'red', 'yesbutton3')"/>
+		</div>
+	</div>
+  </div>
+</div>
 <h4> Subscribe to our Flying Toucans Blog Subscription for constant updates for our show, discounts, and much more. Support our band and become a Flying Toucan by subscribing now. </h4>
 </div>
 <center>
